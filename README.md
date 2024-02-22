@@ -1,4 +1,5 @@
 # LoadedGuns Advanced Drug Processing
+Currently I use this script personally alongside LionHearts QB-Labs for their Door Functions Only! I will be integrating the code into my script soon!
 
 # Chemicals Preview
 ![image](https://user-images.githubusercontent.com/82112471/165860380-861eddc3-8548-442d-b483-2afd311970ad.png)
