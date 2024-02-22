@@ -367,6 +367,16 @@ RegisterNetEvent('lg-drugprocessing:pickCocaLeaves', function()
 
 end)
 
+RegisterNetEvent('lg-drugprocessing:client:bagcoke', function()
+    QBCore.Functions.TriggerCallback('lg-drugprocessing:validate_items', function(result)
+		if result.ret then
+			BagCoke()
+		else
+			QBCore.Functions.Notify(Lang:t("error.no_item", {item = result.item}))
+		end
+	end, {coke = 1})
+end)
+
 AddEventHandler('onResourceStop', function(resource)
 	if resource == GetCurrentResourceName() then
 		for _, v in pairs(CocaPlants) do
@@ -399,14 +409,4 @@ CreateThread(function()
             inCokeField = false
         end
     end)
-end)
-
-RegisterNetEvent('lg-drugprocessing:client:bagcoke', function()
-    QBCore.Functions.TriggerCallback('lg-drugprocessing:validate_items', function(result)
-		if result.ret then
-			BagCoke()
-		else
-			QBCore.Functions.Notify(Lang:t("error.no_item", {item = result.item}))
-		end
-	end, {coke = 1})
 end)
