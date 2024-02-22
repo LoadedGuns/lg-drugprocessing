@@ -77,5 +77,5 @@ qb-inventory > html > images
 * [Meth Lab IPL](https://github.com/Bob74/bob74_ipl/tree/master/dlc_tuner)
 
 # Original Repo
-https://github.com/DoPeMan17/esx_drugs
-https://github.com/Project-Sloth/ps-drugprocessing
+* https://github.com/DoPeMan17/esx_drugs
+* https://github.com/Project-Sloth/ps-drugprocessing
