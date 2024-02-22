@@ -3,13 +3,13 @@ Config = {}
 Config.KeyRequired = true
 
 Config.Delays = {
-	WeedProcessing = 1000 * 10,
-	MethProcessing = 1000 * 10,
-	CokeProcessing = 1000 * 10,
-	lsdProcessing = 1000 * 10,
-	HeroinProcessing = 1000 * 10,
-	thionylchlorideProcessing = 1000 * 10,
-	MoneyPrinting = 1000 * 10,
+	WeedProcessing = 500 * 10,
+	MethProcessing = 500 * 10,
+	CokeProcessing = 500 * 10,
+	lsdProcessing = 500 * 10,
+	HeroinProcessing = 500 * 10,
+	thionylchlorideProcessing = 500 * 10,
+	MoneyPrinting = 500 * 10,
 }
 
 Config.CircleZones = {
