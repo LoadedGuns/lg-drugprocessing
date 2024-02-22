@@ -24,7 +24,6 @@ server_scripts {
 	'server/heroin.lua',
 	'server/chemicals.lua',
 	'server/moneyprinting.lua',
-	'server/versioncheck.lua',
 }
 
 client_scripts {
