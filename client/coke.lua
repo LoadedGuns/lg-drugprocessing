@@ -240,6 +240,56 @@ local function BagCoke()
 	end)
 end
 
+local function CutSmallBrick()
+	isProcessing = true
+	local playerPed = PlayerPedId()
+
+	TaskStartScenarioInPlace(playerPed, "PROP_HUMAN_PARKING_METER", 0, true)
+	QBCore.Functions.Progressbar("search_register", Lang:t("progressbar.cuttingsmall"), 15000, false, true, {
+		disableMovement = true,
+		disableCarMovement = true,
+		disableMouse = false,
+		disableCombat = true,
+	}, {}, {}, {}, function()
+		TriggerServerEvent('lg-drugprocessing:cutsmallbrick')
+		local timeLeft = Config.Delays.CokeProcessing / 1000
+		while timeLeft > 0 do
+			Wait(1000)
+			timeLeft -= 1
+		end
+		ClearPedTasks(PlayerPedId())
+		isProcessing = false
+	end, function()
+		ClearPedTasks(PlayerPedId())
+		isProcessing = false
+	end)
+end
+
+local function CutLargeBrick()
+	isProcessing = true
+	local playerPed = PlayerPedId()
+
+	TaskStartScenarioInPlace(playerPed, "PROP_HUMAN_PARKING_METER", 0, true)
+	QBCore.Functions.Progressbar("search_register", Lang:t("progressbar.cuttinglarge"), 15000, false, true, {
+		disableMovement = true,
+		disableCarMovement = true,
+		disableMouse = false,
+		disableCombat = true,
+	}, {}, {}, {}, function()
+		TriggerServerEvent('lg-drugprocessing:cutlargebrick')
+		local timeLeft = Config.Delays.CokeProcessing / 1000
+		while timeLeft > 0 do
+			Wait(1000)
+			timeLeft -= 1
+		end
+		ClearPedTasks(PlayerPedId())
+		isProcessing = false
+	end, function()
+		ClearPedTasks(PlayerPedId())
+		isProcessing = false
+	end)
+end
+
 RegisterNetEvent('lg-drugprocessing:ProcessCocaFarm', function()
 	local coords = GetEntityCoords(PlayerPedId())
 
@@ -371,6 +421,26 @@ RegisterNetEvent('lg-drugprocessing:client:bagcoke', function()
     QBCore.Functions.TriggerCallback('lg-drugprocessing:validate_items', function(result)
 		if result.ret then
 			BagCoke()
+		else
+			QBCore.Functions.Notify(Lang:t("error.no_item", {item = result.item}))
+		end
+	end, {coke = 1})
+end)
+
+RegisterNetEvent('lg-drugprocessing:client:cutlargebrick', function()
+    QBCore.Functions.TriggerCallback('lg-drugprocessing:validate_items', function(result)
+		if result.ret then
+			CutLargeBrick()
+		else
+			QBCore.Functions.Notify(Lang:t("error.no_item", {item = result.item}))
+		end
+	end, {coke = 1})
+end)
+
+RegisterNetEvent('lg-drugprocessing:client:cutsmallbrick', function()
+    QBCore.Functions.TriggerCallback('lg-drugprocessing:validate_items', function(result)
+		if result.ret then
+			CutSmallBrick()
 		else
 			QBCore.Functions.Notify(Lang:t("error.no_item", {item = result.item}))
 		end

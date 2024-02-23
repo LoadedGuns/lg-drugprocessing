@@ -15,6 +15,11 @@ Config.Delays = {
 Config.CircleZones = {
 	WeedField = {coords = vector3(297.54, 4319.71, 47.30), name = ('Weed Farm'), radius = 100.0},
 	WeedProcessing = {coords = vector3(1038.33, -3204.44, -38.17), name = ('Weed Process'), radius = 100.0},
+
+	CokeField = {coords = vector3(-2187.86, 5181.50, 16.16), name = ('Coke'), radius = 100.0},
+	CokeProcessing = {coords = vector3(1087.14, -3195.31, -38.99), name = ('Coke Process'), radius = 20.0}, 
+	CokePowder = {coords = vector3(1092.9, -3196.65, -38.99), name = ('Powder Cutting'), radius = 20.0},--vector3(1092.9, -3196.65, -38.99)
+	CokeBrick = {coords = vector3(1099.57, -3194.35, -38.99), name = ('Brick Up Packages'), radius = 20.0},--vector3(1099.57, -3194.35, -38.99)
 	
 	MethProcessing = {coords = vector3(978.17, -147.98, -48.53), name = ('Meth Process'), radius = 20.0},
 	MethTemp = {coords = vector3(982.56, -145.59, -49.0), name = ('Meth Temperature'), radius = 20.0},
@@ -26,17 +31,11 @@ Config.CircleZones = {
 	
 	ChemicalsField = {coords = vector3(2825.56, 1773.98, 10.21), name = ('Chemicals'), radius = 20.0},
 	ChemicalsConvertionMenu = {coords = vector3(3536.71, 3662.63, 28.12), name = ('Chemicals Process'), radius = 100.0},
-
-	CokeField = {coords = vector3(-2187.86, 5181.50, 16.16), name = ('Coke'), radius = 100.0},
-	CokeProcessing = {coords = vector3(1087.14, -3195.31, -38.99), name = ('Coke Process'), radius = 20.0}, 
-	CokePowder = {coords = vector3(1092.9, -3196.65, -38.99), name = ('Powder Cutting'), radius = 20.0},--vector3(1092.9, -3196.65, -38.99)
-	CokeBrick = {coords = vector3(1099.57, -3194.35, -38.99), name = ('Brick Up Packages'), radius = 20.0},--vector3(1099.57, -3194.35, -38.99)
 	
 	HeroinField = {coords = vector3(-2341.50, 70.34, 126.42), name = ('Heroin'), radius = 30.0},
 	HeroinProcessing = {coords = vector3(64.79, 3685.00, 39.83), name = ('Heroin Process'), radius = 100.0},
 
 	lsdProcessing = {coords = vector3(2503.84, -428.11, 92.99), name = ('LSD process'), radius = 100.0},
-
 	thionylchlorideProcessing = {coords = vector3(-679.59, 5800.46, 17.33), name = ('Thi Clo Process'), radius = 100.0},
 
 	moneysheet = {coords = vector3(1133.28, -3198.26, -38.92), name = ('Print Sheet'), radius = 100.0},

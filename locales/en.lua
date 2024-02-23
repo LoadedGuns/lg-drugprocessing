@@ -68,6 +68,8 @@ local Translations = {
         rolling_joint = "Rolling Joint",
         bagging_skunk = "Bagging Skunk",
         bagging_coke = "Bagging Cocaine",
+        cuttingsmall = "Cutting Brick",
+        cuttinglarge = "Cutting Brick",
     },
     items = {
         hydrochloric_acid = "Hydrochloric acid",

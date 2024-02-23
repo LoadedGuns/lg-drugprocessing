@@ -1,5 +1,4 @@
 # LoadedGuns Advanced Drug Processing
-Currently I use this script personally alongside LionHearts QB-Labs for their Door Functions Only! I will be integrating the code into my script soon!
 
 # Chemicals Preview
 ![image](https://user-images.githubusercontent.com/82112471/165860380-861eddc3-8548-442d-b483-2afd311970ad.png)
@@ -77,5 +76,5 @@ qb-inventory > html > images
 * [Meth Lab IPL](https://github.com/Bob74/bob74_ipl/tree/master/dlc_tuner)
 
 # Original Repo
-* https://github.com/DoPeMan17/esx_drugs
-* https://github.com/Project-Sloth/ps-drugprocessing
+https://github.com/DoPeMan17/esx_drugs
+https://github.com/Project-Sloth/ps-drugprocessing

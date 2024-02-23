@@ -91,7 +91,63 @@ RegisterServerEvent('lg-drugprocessing:bagcoke', function()
 	end
 end)
 
+RegisterServerEvent('lg-drugprocessing:cutsmallbrick', function()
+	local src = source
+    local Player = QBCore.Functions.GetPlayer(src)
+
+	if Player.Functions.RemoveItem('coke_small_brick', 1) then
+		if Player.Functions.RemoveItem('empty_weed_bag', 10) then
+			if Player.Functions.AddItem('cokebaggy', 10) then
+				TriggerClientEvent("inventory:client:ItemBox", source, QBCore.Shared.Items['coke_small_brick'], "remove")
+				TriggerClientEvent("inventory:client:ItemBox", source, QBCore.Shared.Items['empty_weed_bag'], "remove")
+				TriggerClientEvent("inventory:client:ItemBox", source, QBCore.Shared.Items['cokebaggy'], "add")
+				TriggerClientEvent('QBCore:Notify', src, Lang:t("success.baggy"), "success")
+			else
+				Player.Functions.AddItem('coke_small_brick', 1)
+				Player.Functions.AddItem('empty_weed_bag', 10)
+			end
+		else
+			Player.Functions.AddItem('coke_small_brick', 1)
+		end
+	else
+		TriggerClientEvent('QBCore:Notify', src, Lang:t("error.no_coke"), "error")
+	end
+end)
+
+RegisterServerEvent('lg-drugprocessing:cutlargebrick', function()
+	local src = source
+    local Player = QBCore.Functions.GetPlayer(src)
+
+	if Player.Functions.RemoveItem('coke_brick', 1) then
+		if Player.Functions.RemoveItem('empty_weed_bag', 40) then
+			if Player.Functions.AddItem('cokebaggy', 40) then
+				TriggerClientEvent("inventory:client:ItemBox", source, QBCore.Shared.Items['coke_large_brick'], "remove")
+				TriggerClientEvent("inventory:client:ItemBox", source, QBCore.Shared.Items['empty_weed_bag'], "remove")
+				TriggerClientEvent("inventory:client:ItemBox", source, QBCore.Shared.Items['cokebaggy'], "add")
+				TriggerClientEvent('QBCore:Notify', src, Lang:t("success.baggy"), "success")
+			else
+				Player.Functions.AddItem('coke_large_brick', 1)
+				Player.Functions.AddItem('empty_weed_bag', 40)
+			end
+		else
+			Player.Functions.AddItem('coke_brick', 1)
+		end
+	else
+		TriggerClientEvent('QBCore:Notify', src, Lang:t("error.no_coke"), "error")
+	end
+end)
+
 QBCore.Functions.CreateUseableItem("coke", function(source, item)
     local Player = QBCore.Functions.GetPlayer(source)
     TriggerClientEvent('lg-drugprocessing:client:bagcoke', source, 'empty_weed_bag', item)
+end)
+
+QBCore.Functions.CreateUseableItem("coke_small_brick", function(source, item)
+    local Player = QBCore.Functions.GetPlayer(source)
+    TriggerClientEvent('lg-drugprocessing:client:cutsmallbrick', source, 'empty_weed_bag', item)
+end)
+
+QBCore.Functions.CreateUseableItem("coke_brick", function(source, item)
+    local Player = QBCore.Functions.GetPlayer(source)
+    TriggerClientEvent('lg-drugprocessing:client:cutlargebrick', source, 'empty_weed_bag', item)
 end)
