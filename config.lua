@@ -80,12 +80,12 @@ Config.WeedLab = {
 --------------------------------
 
 Config.CokeProcessing = {
-	CokeLeaf = 1, -- Amount of Leaf Needed to Process
-	ProcessCokeLeaf = math.random(2,4), -- Amount of Coke Received
+	CokeLeaf = 2, -- Amount of Leaf Needed to Process
+	ProcessCokeLeaf = 4, -- Amount of Coke Received
 	-- Processing Small Bricks --
-	Coke = 10, -- Amount of Coke Needed for Small Brick
+	Coke = 5, -- Amount of Coke Needed for Small Brick
 	BakingSoda = 5, -- Amount of Baking Soda Needed for Small Brick
-	SmallCokeBrick = math.random(1,1),
+	SmallCokeBrick = 1,
 	-- Process Small Bricks Into Large Brick --
 	SmallBrick = 4, -- Amount of Small Bricks Required
 	LargeBrick = 1, -- Large Bricks Received

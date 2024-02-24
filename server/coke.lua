@@ -110,7 +110,7 @@ RegisterServerEvent('lg-drugprocessing:cutsmallbrick', function()
 			Player.Functions.AddItem('coke_small_brick', 1)
 		end
 	else
-		TriggerClientEvent('QBCore:Notify', src, Lang:t("error.no_coke"), "error")
+		TriggerClientEvent('QBCore:Notify', src, Lang:t("error.no_bags"), "error")
 	end
 end)
 
@@ -133,7 +133,7 @@ RegisterServerEvent('lg-drugprocessing:cutlargebrick', function()
 			Player.Functions.AddItem('coke_brick', 1)
 		end
 	else
-		TriggerClientEvent('QBCore:Notify', src, Lang:t("error.no_coke"), "error")
+		TriggerClientEvent('QBCore:Notify', src, Lang:t("error.no_bags"), "error")
 	end
 end)
 

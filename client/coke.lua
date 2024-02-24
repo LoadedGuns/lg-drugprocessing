@@ -308,7 +308,7 @@ end)
 
 RegisterNetEvent('lg-drugprocessing:ProcessCocaPowder', function()
 	local coords = GetEntityCoords(PlayerPedId())
-	local amount = 10
+	local amount = 5
 	local amount2 = 5
 	
 	if #(coords-Config.CircleZones.CokePowder.coords) < 5 then
@@ -434,7 +434,7 @@ RegisterNetEvent('lg-drugprocessing:client:cutlargebrick', function()
 		else
 			QBCore.Functions.Notify(Lang:t("error.no_item", {item = result.item}))
 		end
-	end, {coke = 1})
+	end, {coke_brick = 1})
 end)
 
 RegisterNetEvent('lg-drugprocessing:client:cutsmallbrick', function()
@@ -444,7 +444,7 @@ RegisterNetEvent('lg-drugprocessing:client:cutsmallbrick', function()
 		else
 			QBCore.Functions.Notify(Lang:t("error.no_item", {item = result.item}))
 		end
-	end, {coke = 1})
+	end, {coke_small_brick = 1})
 end)
 
 AddEventHandler('onResourceStop', function(resource)

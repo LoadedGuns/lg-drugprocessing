@@ -30,6 +30,7 @@ local Translations = {
         nopaper = "You do not have the Cotton Paper!",
         noink = "You do not have the special Ink!",
         nosheet = "You dont have a Sheet of Printed Bills!",
+        no_bags = "You are missing empty bags!",
     },
     success = {
         temp_up = "Temperature increased!",
