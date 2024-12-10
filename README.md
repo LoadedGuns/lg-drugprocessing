@@ -1,4 +1,6 @@
 # LoadedGuns Advanced Drug Processing
+I have changed a few things around from the original, and added in money printing, a criminal activity that can be done with items gained from bank robberies ideally (Or any method of your choosing) If you have any questions you can email me at loadedgunsttv@yahoo.com or on discord "loadedguns"
+
 
 # Chemicals Preview
 ![image](https://user-images.githubusercontent.com/82112471/165860380-861eddc3-8548-442d-b483-2afd311970ad.png)
